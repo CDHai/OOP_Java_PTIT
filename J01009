@@ -1,0 +1,13 @@
+public class Tonggiaithua {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        long tong = 0;
+        long tich = 1;
+        for(int i=1;i<=n;i++){
+            tich = tich*i;
+            tong = tong + tich;
+        }
+        System.out.print(tong);
+    }
+}
