@@ -1,0 +1,14 @@
+public class Somayman {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        int s=0;
+        while(n>0){
+            long tmp = n%10;
+            if(tmp==4 || tmp==7) s++;
+            n/=10;
+        }
+        if(s==4 || s==7) System.out.println("YES");
+        else System.out.println("NO");
+    }  
+}
