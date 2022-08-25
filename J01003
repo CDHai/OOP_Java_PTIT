@@ -1,0 +1,19 @@
+public class Phuongtrinhbacnhat {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        pt(a, b);
+    }
+    
+    public static void pt(double a, double b) {
+        if(a==0) {
+            if(b==0) System.out.print("VSN");
+            if(b!=0) System.out.print("VN");
+        }
+        else {
+            System.out.format("%.2f", -b/a);
+        }
+    }
+}
