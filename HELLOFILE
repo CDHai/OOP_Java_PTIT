@@ -1,0 +1,14 @@
+package test;
+
+import java.util.*;
+import java.io.FileNotFoundException;
+import java.io.File;
+
+public class hellofile {
+    public static void main(String args[]) throws FileNotFoundException{
+        Scanner sc = new Scanner(new File("Hello.txt"));
+        while(sc.hasNextLine()){
+            System.out.println(sc.nextLine());
+        }
+    }
+}
