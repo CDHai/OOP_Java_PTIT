@@ -1,0 +1,45 @@
+PhanSo.java
+package Lop;
+
+public class PhanSo {
+    private long tu, mau;
+    
+    public PhanSo(long tu, long mau) {
+        this.tu = tu;
+        this.mau = mau;
+    }
+    
+    public  String toString(){
+        return tu + "/" + mau;
+    }
+    
+    public void rutGon(){
+        long x = usc(tu, mau);
+        tu /= x;
+        mau /= x;
+    }
+    
+    private long usc(long a, long b){
+        while(b>0){
+            long t = a%b;
+            a = b;
+            b = t;
+        }
+        return a;
+    }
+}
+
+Tesst.java
+package Lop;
+
+import java.util.*;
+
+public class Tesst {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        PhanSo p = new PhanSo(in.nextLong(), in.nextLong());
+        p.rutGon();
+        System.out.println(p);
+    }
+}
+
