@@ -1,0 +1,55 @@
+J04005/J04005Class.java
+package J04005;
+
+public class J04005Class {
+    private String hoten;
+    private String ngay;
+    private double tong;
+
+    public J04005Class(String hoten, String ngay, double diem1, double diem2, double diem3) {
+        this.hoten = hoten;
+        this.ngay = ngay;
+        this.tong = diem1 + diem2 + diem3;
+    }
+    
+    @Override
+    public String toString() {
+        return hoten + ' ' + ngay + ' ' + String.format("%.1f", tong); 
+    }
+   
+}
+
+J04005/main.java
+import java.util.*;
+
+class ThiSinh{
+    String ten;
+    String ngaySinh;
+    float tongDiem;
+
+    ThiSinh(String ten, String ngaySinh, float tongDiem){
+        this.ten = ten;
+        this.ngaySinh = ngaySinh;
+        this.tongDiem = tongDiem;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s %s %.1f", ten, ngaySinh, tongDiem);
+    }
+}
+
+public class main{
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String ten = sc.nextLine();
+        String ngaySinh = sc.nextLine();
+        float d1 = sc.nextFloat();
+        float d2 = sc.nextFloat();
+        float d3 = sc.nextFloat();
+        ThiSinh A = new ThiSinh(ten, ngaySinh, d1 + d2 + d3);
+        System.out.print(A);
+        sc.close();
+    }
+}
