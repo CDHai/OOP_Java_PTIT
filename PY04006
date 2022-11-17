@@ -1,0 +1,47 @@
+j04006/Main.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package j04006;
+
+import java.util.*;
+import java.text.*;
+import java.time.*;
+public class Main {
+    public static void main(String[] args) throws ParseException{
+        Scanner in = new Scanner(System.in);
+        SinhVien sv=new SinhVien(in.nextLine(),in.nextLine(),in.nextLine(),in.nextFloat());
+        System.out.println(sv);
+    }
+}
+j04006/SinhVien.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package j04006;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class SinhVien {
+    private String name, lop,ma;
+    private Date ngaysinh;
+    private float gpa;
+    
+    public SinhVien(String name, String lop, String ngaysinh, float gpa) throws ParseException{
+        this.ma = "B20DCCN001";
+        this.name = name;
+        this.lop = lop;
+        this.ngaysinh = new SimpleDateFormat("dd/mm/yyyy").parse(ngaysinh);
+        this.gpa = gpa;
+    }
+    
+    public String toString(){
+        return ma + " " + name + " " + lop + " " + new SimpleDateFormat("dd/mm/yyyy").format(ngaysinh) + " " + String.format("%.2f",gpa);
+    }
+    
+}
+
